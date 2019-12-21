@@ -1,4 +1,4 @@
-{% set version = '4.6' %}
+{% set version = "4.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rrBLUP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rrBLUP/rrBLUP_{{ version }}.tar.gz
-  sha256: 28b475a1466fcdc1780caace75cf34155338fda496cebd5799315598a4bc84af
+  sha256: e9230e74cc430a83ac5567071cb1c7f00b35c368f7d79bcc1cfde7225446c4db
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
