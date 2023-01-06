@@ -1,4 +1,4 @@
-{% set version = "4.6.1" %}
+{% set version = "4.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rrBLUP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rrBLUP/rrBLUP_{{ version }}.tar.gz
-  sha256: e9230e74cc430a83ac5567071cb1c7f00b35c368f7d79bcc1cfde7225446c4db
+  sha256: 860f5e3f889593b6737f386743a2679322ec7d3557bea8e25482fd6cb745adff
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,11 +36,9 @@ test:
 about:
   home: http://potatobreeding.cals.wisc.edu/software
   license: GPL-3
-  summary: Software for genomic prediction with the RR-BLUP mixed model (Endelman 2011, <doi:10.3835/plantgenome2011.08.0024>).
-    One application is to estimate marker effects by ridge regression; alternatively,
-    BLUPs can be calculated based on an additive relationship matrix or a Gaussian kernel.
+  summary: Software for genomic prediction with the RR-BLUP mixed model (Endelman 2011, <doi:10.3835/plantgenome2011.08.0024>). One application is to estimate marker effects by ridge regression; alternatively, BLUPs can be calculated based on an additive relationship matrix or a Gaussian kernel.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
