@@ -1,11 +1,11 @@
-About r-rrblup
-==============
+About r-rrblup-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rrblup-feedstock/blob/main/LICENSE.txt)
 
 Home: http://potatobreeding.cals.wisc.edu/software
 
 Package license: GPL-3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rrblup-feedstock/blob/main/LICENSE.txt)
 
 Summary: Software for genomic prediction with the RR-BLUP mixed model (Endelman 2011, <doi:10.3835/plantgenome2011.08.0024>). One application is to estimate marker effects by ridge regression; alternatively, BLUPs can be calculated based on an additive relationship matrix or a Gaussian kernel.
 
