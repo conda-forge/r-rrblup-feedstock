@@ -1,6 +1,5 @@
 {% set version = "4.6.3" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rrblup
@@ -13,8 +12,7 @@ source:
   sha256: cd2a257ecb8252f352fd09189b538db62e4de4a51091cf392c18966c3f0c80cd
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -35,10 +33,11 @@ test:
 
 about:
   home: http://potatobreeding.cals.wisc.edu/software
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Software for genomic prediction with the RR-BLUP mixed model (Endelman 2011, <doi:10.3835/plantgenome2011.08.0024>). One application is to estimate marker effects by ridge regression; alternatively, BLUPs can be calculated based on an additive relationship matrix or a Gaussian kernel.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
